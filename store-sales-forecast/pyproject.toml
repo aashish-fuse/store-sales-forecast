@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "store-sales-forecast"
+version = "0.1.0"
+description = "Time series forecasting of store sales."
+authors = ["aashish-fuse <aashish@fusemachines.com>"]
+license = "GPL-3.0"
+readme = "README.md"
+packages = [{include = "store_sales_forecast"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.11"
+pandas = "^1.5.3"
+jupyterlab = "^3.6.1"
+statsmodels = "^0.13.5"
+pmdarima = "^2.0.2"
+prophet = "^1.1.2"
+seaborn = "^0.12.2"
+lightgbm = "^3.3.5"
+tensorflow = "^2.10.0"
+torch = "^1.13.1"
+pytorch-lightning = "^1.9.4"
+pytorch-forecasting = "^0.10.3"
+
+[tool.poetry.group.dev.dependencies]
+jupyterlab-git = "^0.41.0"
+jupyterlab-lsp = "^3.10.2"
+jupyterlab-code-formatter = "^1.5.3"
+python-lsp-server = "^1.7.1"
+pylsp-mypy = "^0.6.6"
+python-lsp-black = "^1.2.1"
+python-lsp-isort = "^0.1"
+pylint = "^2.16.2"
+mypy = "^1.0.1"
+black = "^23.1.0"
+isort = "^5.12.0"
+
+[tool.pylsp-mypy]
+enabled = true
+live_mode = true
+strict = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
