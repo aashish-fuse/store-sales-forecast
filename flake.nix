@@ -24,9 +24,12 @@
           nodejs
           cudaPackages.cuda_cudart
           cudaPackages.cudnn
+          cudaPackages.cutensor
         ]);
 
-        runScript = "bash";
+        profile = "export CUDA_PATH=${pkgs.cudatoolkit}";
+
+        runScript = "fish";
       }).env;
     };
   };
